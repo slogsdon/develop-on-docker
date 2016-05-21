@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  develop-php:
+    extends: develop-base
+    build: ./develop-php
+
+  develop-haskell:
+    extends: develop-base
+    build: ./develop-haskell
+
+  develop-base:
+    build: ./develop-base
+    volumes:
+      - ~/.dotfiles:/root/.dotfiles
+      - ~/.ssh:/root/.ssh
