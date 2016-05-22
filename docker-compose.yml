@@ -12,5 +12,5 @@ services:
   develop-base:
     build: ./develop-base
     volumes:
-      - ~/.dotfiles:/root/.dotfiles
-      - ~/.ssh:/root/.ssh
+      - ~/.dotfiles:/home/user/.dotfiles
+      - ~/.ssh:/home/user/.ssh
