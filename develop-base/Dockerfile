@@ -32,12 +32,11 @@ RUN \
     make install &&\
     cd .. &&\
     rm -rf ./neovim &&\
-    chsh -s /bin/zsh &&\
     pip3 install neovim &&\
     pip2 install neovim &&\
     apt-get autoremove -y && apt-get clean -y &&\
     rm -rf /var/lib/apit/lists &&\
-    adduser --disabled-password -m $USER &&\
+    adduser --disabled-password --gecos '' --shell $SHELL $USER &&\
     adduser $USER sudo &&\
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
