@@ -43,4 +43,4 @@ RUN \
 WORKDIR $HOME
 USER $USER
 
-ENTRYPOINT ["$SHELL", "-c", "STOW_INSTALL=\"$HOME/.dotfiles/scripts/install.sh\"; [[ -f $STOW_INSTALL ]] && bash $STOW_INSTALL &>/dev/null; zsh -i"]
+ENTRYPOINT ["zsh", "-c", "STOW_INSTALL=\"$HOME/.dotfiles/scripts/install.sh\"; [[ -f $STOW_INSTALL ]] && bash $STOW_INSTALL &>/dev/null; zsh -i"]
