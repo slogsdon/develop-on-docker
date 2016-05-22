@@ -8,22 +8,23 @@ ENV HOME /home/$USER
 RUN \
     apt-get update &&\
     apt-get install -y \
-      tmux \
-      zsh \
+      autoconf \
+      automake \
+      build-essential \
+      cmake \
       curl \
-      stow \
-      python-dev python-pip python3-dev python3-pip \
+      g++ \
+      git \
       libssl-dev \
       libtool \
       libtool-bin \
-      autoconf \
-      automake \
-      cmake \
-      g++ \
       pkg-config \
-      build-essential \
+      python-dev python-pip python3-dev python3-pip \
+      stow \
+      sudo \
+      tmux \
       unzip \
-      git \
+      zsh \
       &&\
     git clone https://github.com/neovim/neovim &&\
     cd neovim &&\
@@ -35,7 +36,10 @@ RUN \
     pip3 install neovim &&\
     pip2 install neovim &&\
     apt-get autoremove -y && apt-get clean -y &&\
-    useradd -m $USER
+    rm -rf /var/lib/apit/lists &&\
+    adduser --disabled-password -m $USER &&\
+    adduser $USER sudo &&\
+    echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 WORKDIR $HOME
 USER $USER
