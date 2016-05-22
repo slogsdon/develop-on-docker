@@ -38,6 +38,7 @@ RUN \
     rm -rf /var/lib/apit/lists &&\
     adduser --disabled-password --gecos '' --shell $SHELL $USER &&\
     adduser $USER sudo &&\
+    chown -R $USER:$USER $HOME &&\
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 WORKDIR $HOME
