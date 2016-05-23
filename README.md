@@ -13,6 +13,35 @@ A set of Docker images to aid development in containers
 - [`develop-node`][develop-node] - NodeJS 6.2.0 development environment
 - [`develop-elm`][develop-elm] - Elm development environment
 
+## Usage
+
+These images can be run with plain ol' `docker`:
+
+```
+$ docker run --rm -it slogsdon/develop-base
+```
+
+and with `docker-compose` as another service:
+
+```yaml
+version: '2'
+services:
+  # ...
+  develop:
+    image: slogsdon/develop-base
+    volumes:
+      - ~/.dotfiles:/home/user/.dotfiles
+      - ./:/home/user/code
+```
+
+```
+$ docker-compose run develop
+```
+
+## Configuring
+
+These images do not supply any dotfiles for configuring applications, so plan to use Docker volumes for this purpose, similar to the Docker Compose example above. If you already have a dotfiles folder in use on your development machines, create a volume for them at `/home/user/.dotfiles`, and if needed and present, a setup script located at `/home/user/.dotfiles/scripts/install.sh` will be run (GNU `stow` is available for convenience).
+
 ## License
 
 See [LICENSE](https://github.com/slogsdon/develop-on-docker/blob/master/LICENSE).

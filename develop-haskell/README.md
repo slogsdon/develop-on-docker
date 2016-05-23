@@ -9,3 +9,5 @@ Includes the following tools:
 - `happy`
 - `hdevtools`
 - `hlint`
+
+Have questions? Consult the [source repository's README](https://github.com/slogsdon/develop-on-docker/blob/master/README.md).
