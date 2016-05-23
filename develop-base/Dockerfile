@@ -2,6 +2,7 @@ FROM debian:jessie
 
 # USER
 ENV SHELL /bin/zsh
+ENV TERM xterm-256colors
 ENV USER user
 ENV HOME /home/$USER
 
