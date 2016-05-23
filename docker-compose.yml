@@ -9,6 +9,10 @@ services:
     extends: develop-base
     build: ./develop-haskell
 
+  develop-dotnet:
+    extends: develop-base
+    build: ./develop-dotnet
+
   develop-base:
     build: ./develop-base
     volumes:
