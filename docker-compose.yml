@@ -17,6 +17,10 @@ services:
     extends: develop-base
     build: ./develop-rust
 
+  develop-elixir:
+    extends: develop-base
+    build: ./develop-elixir
+
   develop-base:
     build: ./develop-base
     volumes:
