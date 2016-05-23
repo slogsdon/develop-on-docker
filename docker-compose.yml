@@ -21,6 +21,14 @@ services:
     extends: develop-base
     build: ./develop-elixir
 
+  develop-node:
+    extends: develop-base
+    build: ./develop-node
+
+  develop-elm:
+    extends: develop-base
+    build: ./develop-elm
+
   develop-base:
     build: ./develop-base
     volumes:
