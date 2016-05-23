@@ -7,6 +7,7 @@ Installs PHP 5.6, Composer, and the following extra extensions:
 - `gd`
 - `intl`
 - `mcrypt`
+- `mysql`
 - `xdebug`
 - `xsl`
 
