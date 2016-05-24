@@ -33,6 +33,10 @@ services:
     extends: develop-base
     build: ./develop-racket
 
+  develop-clojure:
+    extends: develop-base
+    build: ./develop-clojure
+
   develop-base:
     build: ./develop-base
     volumes:

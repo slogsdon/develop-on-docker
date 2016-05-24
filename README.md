@@ -13,6 +13,7 @@ A set of Docker images to aid development in containers
 - [`develop-node`][develop-node] - NodeJS 6.2.0 development environment
 - [`develop-elm`][develop-elm] - Elm development environment
 - [`develop-racket`][develop-racket] - Racket 6.5 development environment with the main distribution of packages
+- [`develop-clojure`][develop-clojure] - Clojure development environment with Open JDK 7, Leiningen, and Drip
 
 ## Usage
 
@@ -56,3 +57,4 @@ See [LICENSE](https://github.com/slogsdon/develop-on-docker/blob/master/LICENSE)
 [develop-node]: https://hub.docker.com/r/slogsdon/develop-node/
 [develop-elm]: https://hub.docker.com/r/slogsdon/develop-elm/
 [develop-racket]: https://hub.docker.com/r/slogsdon/develop-racket/
+[develop-clojure]: https://hub.docker.com/r/slogsdon/develop-clojure/
